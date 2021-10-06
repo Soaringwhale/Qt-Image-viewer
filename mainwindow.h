@@ -29,7 +29,7 @@ public:
 
     bool eventFilter(QObject *watched, QEvent *event);
 
-private slots:
+public slots:
      void open(QString);
 
  private:
@@ -39,6 +39,9 @@ private slots:
      bool skipLeft();
      bool skipRight();
      bool deletePic();
+     QSize updateSize(QSize);
+     void clearLayout(QLayout *layout);
+     bool changeViewMode();
 
      QLabel *label;
      QLabel *labelButtonLeft;
@@ -51,6 +54,9 @@ private slots:
 
      QScrollArea *scrollArea;
      float scaleFactor;
+
+     QVBoxLayout *vlayout;
+     QHBoxLayout *hlayout;
 
      QMenu *fileMenu;
      QMenu *viewMenu;
