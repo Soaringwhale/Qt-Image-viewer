@@ -118,7 +118,7 @@ QSize MainWindow::updateSize(QSize size)        //  метод, производ
     return size;
 }
 
-bool MainWindow::changeViewMode()           //!  === !!! ДОДЕЛАТЬ МЕТОД, ЧТОБЫ ОН МЕНЯЛ ОБЫЧНЫЙ РЕЖИМ И РЕЖИМ С ОБЛАСТЬЮ ПРОКРУТКИ !!! ===
+bool MainWindow::changeViewMode()           //!  доделать, метод будет менять обычный режим и режим прокрутки
 {
     //scrollArea->setWidgetResizable(!scrollArea->widgetResizable());          //  меняем режим растяжения на противоположный
     //label->adjustSize();           // подгоняем размер лейбла под размер фотки (при отвязанном режиме лейбл уменьшится в размер фотки, при привязанном все равно ничего не произойдет)
@@ -219,7 +219,7 @@ void MainWindow::open(QString path)       // СРАБАТЫВАЕТ ТОЛЬКО
 
 }
 
-  void MainWindow::scaleImage(double factor)          //!   === !!! БУДУЩИЙ МЕТОД ДЛЯ ЗУМА, ДОДЕЛАТЬ !!! ===
+  void MainWindow::scaleImage(double factor)          //!  возможный метод зума
    {
        Q_ASSERT(label->pixmap());
        scaleFactor *= factor;
